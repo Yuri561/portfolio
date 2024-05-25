@@ -1,0 +1,205 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background: black;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Hero Section */
+.firstwrap {
+    height: 100vh;
+    background: url(./img/banner.jpeg) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    border-image: fill 0 linear-gradient(#0003, #000);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+nav a:hover {
+    background: #00008B;
+    border-radius: 5px;
+}
+
+.btn {
+    background: #00008B;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #00008B;
+}
+
+.content{
+    position: relative !important;
+    top: 50px  !important;
+}
+/* About Section */
+#about {
+    padding: 20px 0;
+}
+
+.about img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.about-text {
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+}
+
+.about-text h3 span {
+    color: #00ff5e;
+}
+
+.about-text p {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.about-text .btn {
+    margin-top: 20px;
+}
+
+
+/* Military section  */
+
+.about .img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.about .image-content{
+    display: grid;
+    grid-template-columns: repeat(1fr,2fr);
+}
+/* Service Section */
+.service {
+    padding: 60px 0;
+}
+
+.service .title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.card{
+    border: none !important;
+}
+.service .card {
+    border: none;
+    color: #fff;
+    text-align: center;
+}
+
+.service .card .card-body i {
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.service .card .card-body h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.service .card .card-body p {
+    font-size: 1rem;
+    font-weight: 800;
+    color: whitesmoke;
+}
+
+.service .card .card-body .btn {
+    color: #00008B;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.service .card .card-body .btn:hover {
+    background: #00008B;
+    scale: 1.1;
+    color: #fff;
+}
+
+#card1 {
+    background-image: url(./img/web.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#card2 {
+    background-image: url(./img/entrepeneur.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#card3 {
+    background-image: url(./img/hvac.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Skills Section */
+#projects {
+    padding: 0;
+    border-image: fill 0 linear-gradient(#0003, #000) !important;
+}
+
+.gradient-box {
+    padding: 20px;
+    background: linear-gradient(to bottom, black 0%, #23074d 20%, #24243e 80%, rgba(0, 0, 0, 0.5) 15%);
+    border-top: black;
+    box-shadow: black;
+    border-bottom: black;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    border-image: fill 0 linear-gradient(#0003, #000) !important;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #00008B;
+}
