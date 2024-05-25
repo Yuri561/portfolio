@@ -206,3 +206,11 @@ nav a:hover {
 .footer .social-icons a:hover {
     color: #00008B;
 }
+
+
+@media screen and (max-width: 1400px){
+    .col-military {
+        position: relative;
+        left: 30rem;
+    }
+}
