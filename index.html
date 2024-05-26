@@ -16,52 +16,56 @@
  
 </head>
 <body>
-    <!-- Hero section starts here -->
-    <div class="firstwrap gradient-box mx-auto">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black text-light fixed-top">
-            <div class="container-fluid h-100">
-                <a class="navbar-brand logo text-light" href="#">Portfo<span>lio</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn btn-primary ms-3">Subscribe</a>
+    <section class="animation">
+
+        <!-- Hero section starts here -->
+        <div class="firstwrap gradient-box mx-auto">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-black text-light fixed-top">
+                <div class="container-fluid h-100">
+                    <a class="navbar-brand logo text-light" href="#">Portfo<span>lio</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary ms-3">Subscribe</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="content d-flex flex-column align-items-center justify-content-center mt-5 text-center mx-auto" style="margin: 0;">
+                <h4 class="text-light">Hello, my name is</h4>
+                <h1 class="text-light">Houbenove <span>Pierre-Louis</span></h1>
+                <h3 class="text-light">I'm a web Developer. <span>Knowledge is Forever</span></h3>
+                <div class="newsletter mt-3">
+                    <form class="d-flex">
+                        <input type="email" name="email" id="mail" placeholder="Enter Your Email" class="form-control me-2">
+                        <input type="submit" name="submit" value="Let's Start" class="btn btn-primary">
+                    </form>
                 </div>
             </div>
-        </nav>
-        <div class="content d-flex flex-column align-items-center justify-content-center mt-5 text-center mx-auto" style="margin: 0;">
-            <h4 class="text-light">Hello, my name is</h4>
-            <h1 class="text-light">Houbenove <span>Pierre-Louis</span></h1>
-            <h3 class="text-light">I'm a web Developer. <span>Knowledge is Forever</span></h3>
-            <div class="newsletter mt-3">
-                <form class="d-flex">
-                    <input type="email" name="email" id="mail" placeholder="Enter Your Email" class="form-control me-2">
-                    <input type="submit" name="submit" value="Let's Start" class="btn btn-primary">
-                </form>
-            </div>
         </div>
-    </div>
+
+    </section>
 
     <!-- About section with image on the left and text on the right -->
    <!-- About/military section with image on the right and text on the left -->
-   <section class="py-5 w-100 gradient-box bg-black text-light" id="about">
+   <section class="py-5 w-100 gradient-box bg-black text-light animation" id="about">
     <div class="container-fluid">
         <div class="row g-4 align-items-center">
             <div class="col-md-6 text-center">
@@ -70,7 +74,7 @@
             <div class="col-md-6 about-text text-light">
                 <h2>About Me</h2>
                 <h3>Developer & <span>Engineer</span></h3>
-                <p class="about-info">
+                <p class="about-info animation">
                     Hello! My name is Houbenove Pierre-Louis, and I was born and raised in Marchand Dessalines, Haiti.
                     Growing up in the United States, I always had a keen interest in coding and programming, 
                     but it wasn't until recently that I truly immersed myself in this field. 
@@ -89,8 +93,8 @@
 </section>
 
 
-    <!-- About/military section with image on the right and text on the left -->
-    <section class="about py-5 w-100 justify-content-center gradient-box mx-auto bg-black text-light" id="military">
+    <!-- About/military section with image on the right and text on the left
+    <section class="about py-5 w-100 justify-content-center gradient-box mx-auto bg-black text-light animation" id="military">
         <div class="container-fluid main d-flex flex-md-column align-items-center justify-content-between">
             <div class="row row-cols-1 row-cols-md-3 row-cols-xl-3 g-xl-5">
                 <div class="col-md-6">
@@ -116,7 +120,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-military">
-                   <div class="img-content d-flex justify-content-center gap-5 flex-wrap">
+                   <div class="img-content d-flex justify-content-center gap-3 flex-wrap">
     <img src="./img/profile.jpeg" alt="a picture of Houbenove Pierre-Louis" class="img d-none d-sm-block rounded">
     <img src="./img/profile1.jpeg" alt="a picture of Houbenove Pierre-Louis" class="img d-none d-sm-block rounded">
     <img src="./img/82nd.jpeg" alt="a picture of Houbenove Pierre-Louis" class="img d-none d-sm-block rounded">
@@ -127,10 +131,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Services section starts here -->
-    <section class="py-5 mx-auto w-100 justify-content-center skills-wrapper gradient-box bg-black text-light" id="services">
+    <section class=" py-5 mx-auto w-100 justify-content-center skills-wrapper gradient-box bg-black text-light" id="services">
         <div class="service container-fluid w-100">
             <div class="title">
                 <h2 class="text-center text-light">My Service</h2>
@@ -171,9 +175,9 @@
     </section>
 
     <!-- Skills section starts here -->
-    <section class="py-5 w-100 justify-content-center gradient-box mx-auto bg-black text-light" id="projects">
+    <section class=" py-5 w-100 justify-content-center gradient-box mx-auto bg-black text-light" id="projects">
         <div class="container-fluid">
-            <div class="title text-center text-light mb-5">
+            <div class=" title text-center text-light mb-5">
                 <h2>Web Development Projects</h2>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -209,9 +213,9 @@
     </section>
 
     <!-- Contact section starts here -->
-    <section class="py-5 w-100 justify-content-center gradient-box mx-auto bg-black text-light" id="contact">
+    <section class=" py-5 w-100 justify-content-center gradient-box mx-auto bg-black text-light" id="contact">
         <div class="container-fluid">
-            <div class="title text-center text-light mb-5">
+            <div class="title  animation text-center text-light mb-5">
                 <h2>Contact Me</h2>
             </div>
             <div class="row">
@@ -251,6 +255,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
