@@ -1,8 +1,8 @@
 // src/components/WhatIOffer/WhatIOffer.tsx
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import { motion } from 'framer-motion';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas} from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
