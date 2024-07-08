@@ -9,6 +9,7 @@ import Convertio from '../../../public/Convertio.png';
 import Ufirst from '../../../public/Ufirst.png';
 import ExclaimedFood from '../../../public/ExclaimedFood.png';
 import './card.css'; // Import the card CSS
+import './Starfield';
 
 const projects = [
   {
