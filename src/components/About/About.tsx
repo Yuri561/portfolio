@@ -9,7 +9,7 @@ import Convertio from '../../../public/Convertio.png';
 import Ufirst from '../../../public/Ufirst.png';
 import ExclaimedFood from '../../../public/ExclaimedFood.png';
 import './card.css'; // Import the card CSS
-import './Starfield';
+import Starfield from './Starfield';
 
 const projects = [
   {
@@ -84,6 +84,7 @@ const ShowcaseSection: React.FC = () => {
 
   return (
     <section className="bg-gray-900 py-16 relative">
+      <Starfield/>
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}

@@ -22,3 +22,32 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
+  /* src/components/WhatIOffer/Offer.css */
+section {
+    position: relative;
+  }
+  
+  @media (max-width: 1024px) {
+    .slick-slide {
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .slick-slide {
+      padding: 0 10px;
+    }
+  
+    .text-center h2 {
+      font-size: 2.5rem;
+    }
+  
+    .text-center p {
+      font-size: 1rem;
+    }
+  
+    .relative.flex.flex-col.items-center.justify-center.text-center.bg-gray-800.rounded-3xl.shadow-xl.p-8.animate-float {
+      height: auto;
+    }
+  }
+  

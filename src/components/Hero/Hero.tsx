@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Globe from 'react-globe.gl';
 import { motion } from 'framer-motion';
+import Starfield from '../About/Starfield';
 
 const Hero: React.FC = () => {
   const globeRef = useRef<any>();
@@ -14,6 +15,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative flex items-center justify-center h-screen bg-gray-900 text-white overflow-hidden">
+      <Starfield/>
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <Globe
           ref={globeRef}
