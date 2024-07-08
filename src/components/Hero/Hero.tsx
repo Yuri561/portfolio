@@ -1,16 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Globe from 'react-globe.gl';
 import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
-  const [globeColor, setGlobeColor] = useState("#ffffff");
-
-  useEffect(() => {
-    const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setGlobeColor(isDarkTheme ? "#ffffff" : "#000000");
-  }, []);
-
-  const globeRef = React.useRef();
+  const globeRef = useRef<any>();
 
   useEffect(() => {
     if (globeRef.current) {
