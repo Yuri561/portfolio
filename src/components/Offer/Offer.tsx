@@ -55,7 +55,7 @@ const Offer: React.FC = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
     responsive: [
         {
           breakpoint: 1024,
