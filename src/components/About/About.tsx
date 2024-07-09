@@ -83,9 +83,9 @@ const ShowcaseSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-gray-900 py-16 relative">
+    <section className="bg-black py-16 relative scroll-container" id='about'>
       <Starfield/>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 scroll-section">
         <motion.div
           ref={ref}
           initial="hidden"

@@ -75,7 +75,7 @@ const Offer: React.FC = () => {
   };
 
   return (
-    <section className="relative flex items-center justify-center h-screen bg-gray-900 text-white overflow-hidden">
+    <section className="relative flex items-center justify-center h-screen bg-black text-white overflow-hidden" id='services'>
       <Starfield />
       <div className="container mx-auto px-4 py-16 text-center relative z-10">
         <motion.div

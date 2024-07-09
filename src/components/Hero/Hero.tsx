@@ -14,15 +14,15 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center h-screen bg-gray-900 text-white overflow-hidden">
+    <section className="relative flex items-center justify-center h-screen bg-black text-white overflow-hidden" id='hero'>
       <Starfield/>
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <Globe
           ref={globeRef}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
           backgroundColor="rgba(0,0,0,0)"
-          width={window.innerWidth * 1.5}
-          height={window.innerHeight * 1.5}
+          width={window.innerWidth * 1.2}
+          height={window.innerHeight * 1.2}
         />
       </div>
       <div className="container mx-auto px-6 py-12 text-center relative z-10">
@@ -59,10 +59,10 @@ const Hero: React.FC = () => {
         >
           <p className="text-gray-400">Popular Tags:</p>
           <div className="flex justify-center space-x-4 mt-2">
-            <span className="bg-gray-800 px-3 py-1 rounded-lg">React</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-lg">Tailwind CSS</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-lg">JavaScript</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-lg">Node.js</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-lg">Resume</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-lg">Hire</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-lg">Join Community</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-lg">Blog</span>
           </div>
         </motion.div>
       </div>
