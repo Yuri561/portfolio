@@ -1,5 +1,5 @@
 // /components/ShowcaseSection.js
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Slider from 'react-slick';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -43,10 +43,10 @@ const projects = [
   },
   {
     title: 'ImpactGames - Build Together, Play Together',
-    description: 'Experience exquisite dining with our food service app, featuring a range of gourmet recipes and services. ExclaimedFood brings fine dining to your doorstep with just a few clicks.',
     img: ImpactGames,
-    livePreview: 'https://efs-eight.vercel.app/',
-    github: 'https://github.com/Yuri561/restaurantApp'
+    description: 'ImpactGames is a collaborative platform that brings together developers and gamers to create, share, and play games.',
+    livePreview: 'https://impactgames.vercel.app/',
+    github: 'https://github.com/Yuri561/impactgames'
   },
 ];
 
