@@ -1,5 +1,5 @@
 // src/components/ContactAndCommunity/ContactAndCommunity.tsx
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
 import { motion } from 'framer-motion';
@@ -7,21 +7,31 @@ import '../Offer/Offer.css';
 import emailjs from 'emailjs-com';
 
 const ContactAndCommunity: React.FC = () => {
+  useEffect(() => {
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    } else {
+      console.error('EmailJS public key is not defined');
+    }
+  }, []);
+
   const formRef = useRef<HTMLFormElement>(null);
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    if(formRef.current){
-      emailjs.sendForm('service_i1gow8r','template_khftc6u', formRef.current)
-      .then((result)=>{
-        console.log(result.text);
-        alert('Thanks we have received your email.');
-      },(error) => {
-        console.log(error.text);
-        alert('Failed to send message, please try again.');
-      });
-        
+    if (formRef.current) {
+      emailjs.sendForm('contact_service', 'contact_form', formRef.current)
+        .then((result) => {
+          console.log(result.text);
+          alert('Thanks we have received your email.');
+        }, (error) => {
+          console.log(error.text);
+          alert('Failed to send message, please try again.');
+        });
     }
-  }
+  };
+
   const floatingVariants = {
     animate: {
       y: [0, -10, 0],
@@ -34,14 +44,15 @@ const ContactAndCommunity: React.FC = () => {
   };
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white py-16" id='contact'>
+    <section className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white py-6" id='contact'>
       <Canvas style={{ position: 'absolute', width: '100%', height: '100%' }}>
         <Stars
           radius={100}
           depth={50}
-          count={5000}
+          count={8000}
           factor={4}
           saturation={0}
+          speed={2}
           fade
         />
       </Canvas>
@@ -69,7 +80,7 @@ const ContactAndCommunity: React.FC = () => {
             style={{ backdropFilter: 'blur(10px)' }}
           >
             <h3 className="text-3xl font-bold mb-6 text-white">Contact Me</h3>
-            <form ref={formRef} method='POST' className="flex flex-col space-y-4">
+            <form ref={formRef} method='POST' className="flex flex-col space-y-4" onSubmit={sendEmail}>
               <input
                 type="text"
                 placeholder="Your Name"
@@ -88,7 +99,6 @@ const ContactAndCommunity: React.FC = () => {
               <button
                 type="submit"
                 className="bg-blue-500 p-4 rounded-lg text-white hover:bg-blue-600"
-                onSubmit={sendEmail}
               >
                 Send Message
               </button>
