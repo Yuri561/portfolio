@@ -1,8 +1,11 @@
 import React from 'react';
+import Starfield from '../About/Starfield';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white my-5 py-8">
+
+    <footer className="bg-black text-white mt-3 py-8">
+      <Starfield />
       <div className="container mx-auto px-4 text-center">
         <p className="text-gray-400 text-sm">
           &copy; {new Date().getFullYear()} Houbenove Pierre-Louis. All rights reserved.

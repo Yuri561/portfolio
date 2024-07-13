@@ -1,14 +1,18 @@
 // src/components/ContactAndCommunity/ContactAndCommunity.tsx
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
 import { motion } from 'framer-motion';
-import '../Offer/Offer.css'; 
+import '../Offer/Offer.css';
 import emailjs from 'emailjs-com';
+import SuccessModal from './SuccessModal';
+import Starfield from '../About/Starfield';
 
 const ContactAndCommunity: React.FC = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   useEffect(() => {
-    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+    const publicKey = 'x8QfCUeOjxLraFUOM';
     if (publicKey) {
       emailjs.init(publicKey);
     } else {
@@ -24,12 +28,13 @@ const ContactAndCommunity: React.FC = () => {
       emailjs.sendForm('contact_service', 'contact_form', formRef.current)
         .then((result) => {
           console.log(result.text);
-          alert('Thanks we have received your email.');
+          setIsModalVisible(true); // Show success modal
         }, (error) => {
-          console.log(error.text);
+          console.error('Failed to send message:', error);
           alert('Failed to send message, please try again.');
         });
-    }
+        formRef.current.reset(); // Reset the form after sending the email
+      }
   };
 
   const floatingVariants = {
@@ -45,6 +50,7 @@ const ContactAndCommunity: React.FC = () => {
 
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white py-6" id='contact'>
+      <Starfield />
       <Canvas style={{ position: 'absolute', width: '100%', height: '100%' }}>
         <Stars
           radius={100}
@@ -83,22 +89,29 @@ const ContactAndCommunity: React.FC = () => {
             <form ref={formRef} method='POST' className="flex flex-col space-y-4" onSubmit={sendEmail}>
               <input
                 type="text"
+                name="user_name"
                 placeholder="Your Name"
                 className="p-4 rounded-lg border border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600"
+                required
               />
               <input
                 type="email"
+                name="user_email"
                 placeholder="Your Email"
                 className="p-4 rounded-lg border border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600"
+                required
               />
               <textarea
+                name="message"
                 placeholder="Your Message"
                 rows={4}
                 className="p-4 rounded-lg border border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600"
+                required
               ></textarea>
               <button
                 type="submit"
                 className="bg-blue-500 p-4 rounded-lg text-white hover:bg-blue-600"
+                onSubmit={sendEmail}
               >
                 Send Message
               </button>
@@ -145,6 +158,7 @@ const ContactAndCommunity: React.FC = () => {
           </motion.div>
         </div>
       </div>
+      {isModalVisible && <SuccessModal onClose={() => setIsModalVisible(false)} />}
     </section>
   );
 };
